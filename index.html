@@ -164,6 +164,8 @@
   .photo-placeholder .icon{font-size:1.6rem;}
   .photo-placeholder .label{font-size:0.82rem; font-weight:600;}
   .photo-placeholder .sub{font-size:0.76rem; color:var(--text-dim);}
+  .map-embed{position:relative; width:100%; min-height:220px; border-radius:14px; overflow:hidden; border:1px solid var(--line);}
+  .map-embed iframe{position:absolute; inset:0; width:100%; height:100%; border:0; filter:grayscale(0.2) contrast(1.05);}
   .album-foto{background:#fff; padding:10px 10px 16px; box-shadow:0 20px 50px rgba(0,0,0,0.4); transform:rotate(-1.2deg); margin:0 auto 34px; max-width:88%; border:1px solid rgba(0,0,0,0.06); transition:transform .3s ease; overflow:hidden; border-radius:2px;}
   .album-foto:hover{transform:rotate(0deg) scale(1.02);}
   .album-foto img{filter:sepia(0.12) saturate(0.95); transition:transform .2s ease-out;}
@@ -240,6 +242,7 @@
   .ubi-list li.today span:first-child{background:var(--gradient); -webkit-background-clip:text; background-clip:text; color:transparent;}
   .ubi-list li span:first-child{color:var(--text-dim);}
   .ubicacion .photo-placeholder{min-height:340px;}
+  .ubicacion .map-embed{min-height:340px;}
 
   .cta-final{background:var(--gradient); text-align:center; padding:110px 0;}
   .cta-final h2{color:#180D12; font-size:clamp(1.8rem,4vw,2.8rem); margin-bottom:26px; position:relative; z-index:2;}
@@ -272,6 +275,7 @@
     .foot-grid{gap:22px;}
     .work-media{height:260px;}
     .ubicacion .photo-placeholder, .photo-placeholder{min-height:220px;}
+    .ubicacion .map-embed{min-height:220px;}
     .album-foto{max-width:100%;}
   }
   @media (prefers-reduced-motion: reduce){
@@ -361,7 +365,7 @@ section{padding:110px 0}
       <a href="#leistungen">Leistungen</a>
       <a href="#standort">Kontakt</a>
     </div>
-    <a href="https://wa.me/4960342116" target="_blank" rel="noopener" class="btn magnetic">Termin buchen</a>
+    <a href="https://wa.me/4915735119034" target="_blank" rel="noopener" class="btn magnetic">Termin buchen</a>
     <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
       <span></span><span></span><span></span>
     </button>
@@ -374,7 +378,7 @@ section{padding:110px 0}
   <a href="#arbeiten">Team</a>
   <a href="#leistungen">Leistungen</a>
   <a href="#standort">Kontakt</a>
-  <a href="https://wa.me/4960342116" target="_blank" rel="noopener" class="btn magnetic">Termin buchen</a>
+  <a href="https://wa.me/4915735119034" target="_blank" rel="noopener" class="btn magnetic">Termin buchen</a>
 </div>
 
 <div class="marquee-band">
@@ -397,7 +401,7 @@ section{padding:110px 0}
       </h1>
       <p>Ute, Anja und Angi — Mutter, Tochter und Enkelin — empfangen euch in einem familiären Salon, in dem jeder Schnitt und jede Farbe mit Zeit, Technik und guten Gesprächen entsteht.</p>
       <div class="hero-ctas">
-        <a href="https://wa.me/4960342116" target="_blank" rel="noopener" class="btn magnetic">Per WhatsApp buchen</a>
+        <a href="https://wa.me/4915735119034" target="_blank" rel="noopener" class="btn magnetic">Per WhatsApp buchen</a>
         <a href="#leistungen" class="btn btn-outline magnetic">Leistungen ansehen</a>
       </div>
     </div>
@@ -598,10 +602,12 @@ section{padding:110px 0}
       <h2>Das können wir <span class="grad-text">am besten</span></h2>
     </div>
     <div class="serv-list">
-      <div class="serv-row" data-fx="tilt-left"><div class="serv-icon">✂️</div><div><h3>Schnitt</h3><p>Für jeden Haartyp und Lebensstil, individuell angepasst.</p></div></div>
+      <div class="serv-row" data-fx="tilt-left"><div class="serv-icon">✂️</div><div><h3>Schnitt</h3><p>Für Damen, Herren und Kinder — für jeden Haartyp und Lebensstil individuell angepasst.</p></div></div>
       <div class="serv-row" data-fx="tilt-right"><div class="serv-icon">🎨</div><div><h3>Farbe &amp; Balayage</h3><p>Unsere Spezialität: natürliche Übergänge und langanhaltende Farbe.</p></div></div>
-      <div class="serv-row" data-fx="tilt-left"><div class="serv-icon">〰️</div><div><h3>Styling &amp; Events</h3><p>Hochsteckfrisuren und Wellen für Hochzeiten, Feiern und besondere Anlässe.</p></div></div>
-      <div class="serv-row" data-fx="tilt-right"><div class="serv-icon">💆</div><div><h3>Augenbrauen &amp; Pflege</h3><p>Augenbrauendesign und Behandlungen, die euren Look abrunden.</p></div></div>
+      <div class="serv-row" data-fx="tilt-left"><div class="serv-icon">💫</div><div><h3>Extensions &amp; Verdichtung</h3><p>Haarverlängerung und -verdichtung für mehr Fülle und Länge.</p></div></div>
+      <div class="serv-row" data-fx="tilt-right"><div class="serv-icon">〰️</div><div><h3>Styling &amp; Events</h3><p>Hochsteckfrisuren und Typberatung für Hochzeiten, Feiern und besondere Anlässe.</p></div></div>
+      <div class="serv-row" data-fx="tilt-left"><div class="serv-icon">💆</div><div><h3>Augenbrauen &amp; Bart</h3><p>Augenbrauen zupfen, färben und in Form bringen sowie Bart- und Rasurpflege.</p></div></div>
+      <div class="serv-row" data-fx="tilt-right"><div class="serv-icon">💅</div><div><h3>Make-up &amp; Maniküre</h3><p>Das i-Tüpfelchen für euren Look — perfekt für besondere Anlässe.</p></div></div>
     </div>
   </div>
 </section>
@@ -661,7 +667,7 @@ section{padding:110px 0}
           <li data-day="3"><span>Mittwoch</span><span>9:00 – 18:00</span></li>
           <li data-day="4"><span>Donnerstag</span><span>9:00 – 18:00</span></li>
           <li data-day="5"><span>Freitag</span><span>9:00 – 18:00</span></li>
-          <li data-day="6"><span>Samstag</span><span>8:00 – 13:00</span></li>
+          <li data-day="6"><span>Samstag</span><span>8:00 – 14:00</span></li>
           <li data-day="0"><span>Sonntag</span><span>Geschlossen</span></li>
         </ul>
         <ul class="ubi-list" style="margin-bottom:34px;">
@@ -673,10 +679,8 @@ section{padding:110px 0}
           <a href="https://www.google.com/maps/search/?api=1&query=Ringstra%C3%9Fe+8%2C+61194+Niddatal-Ilbenstadt%2C+Deutschland" target="_blank" rel="noopener" class="btn btn-outline magnetic">Wo sind wir? · Route zu uns</a>
         </div>
       </div>
-      <div class="photo-placeholder" data-fx="tilt-right">
-        <div class="icon">📷</div>
-        <div class="label">Foto ausstehend: Fassade des Salons</div>
-        <div class="sub">Bei Tageslicht, mit sichtbarem Schild — oder eingebettete Karte</div>
+      <div class="map-embed" data-fx="tilt-right">
+        <iframe src="https://www.google.com/maps/embed?origin=mfe&pb=!1m2!2m1!1sFriseursalon+Schnipp+Schnapp%2C+Ringstra%C3%9Fe+8%2C+61194+Niddatal-Ilbenstadt" title="Standort Friseursalon Schnipp Schnapp" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
@@ -685,7 +689,7 @@ section{padding:110px 0}
 <div class="cta-final">
   <div class="wrap" data-fx="pop">
     <h2>Bereit für euren nächsten Look?</h2>
-    <a href="https://wa.me/4960342116" target="_blank" rel="noopener" class="btn magnetic">Schreibt uns per WhatsApp</a>
+    <a href="https://wa.me/4915735119034" target="_blank" rel="noopener" class="btn magnetic">Schreibt uns per WhatsApp</a>
   </div>
 </div>
 
@@ -921,7 +925,7 @@ document.querySelector('.testi-wrap').addEventListener('mouseenter', ()=> clearI
 document.querySelector('.testi-wrap').addEventListener('mouseleave', ()=> testiTimer = setInterval(()=>{ tIndex=(tIndex+1)%slides.length; updateTesti(); }, 6000));
 
 /* ===== live opening hours ===== */
-const hours = {1:null, 2:[9,18], 3:[9,18], 4:[9,18], 5:[9,18], 6:[8,13], 0:null};
+const hours = {1:null, 2:[9,18], 3:[9,18], 4:[9,18], 5:[9,18], 6:[8,14], 0:null};
 function updateStatus(){
   const now = new Date();
   const day = now.getDay();
